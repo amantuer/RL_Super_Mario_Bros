@@ -1,8 +1,8 @@
 import torch
 import numpy as np
-from neural_network import MarioNet  # Renamed AgentNN
+from neural_network import MarioNet  #AgentNN
 
-from memory_storage import ReplayMemory  # Renamed TensorDictReplayBuffer, LazyMemmapStorage, TensorDict
+from memory_storage import ReplayMemory 
 
 class MarioAgent:
     def __init__(self, input_shape, actions, learning_rate=0.00025, discount_factor=0.9, exploration_rate=1.0, exploration_decay=0.99999975, min_exploration=0.1, memory_size=100000, batch_size=32, update_frequency=10000):

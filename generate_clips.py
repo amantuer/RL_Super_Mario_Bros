@@ -1,7 +1,7 @@
 import gym_super_mario_bros
 from gym_super_mario_bros.actions import RIGHT_ONLY
 from nes_py.wrappers import JoypadSpace
-from agent_player import MarioAgent  # Renamed Agent
+from agent_player import MarioAgent  #Agent
 
 from gym import Wrapper
 from gym.wrappers import GrayScaleObservation, ResizeObservation, FrameStack
@@ -9,7 +9,7 @@ from gym.wrappers import GrayScaleObservation, ResizeObservation, FrameStack
 import os
 from PIL import Image
 
-class FrameLogger(Wrapper):  # Renamed SkipFrame
+class FrameLogger(Wrapper):  
     def __init__(self, env, frame_skip):
         super(FrameLogger, self).__init__(env)
         self.frame_skip = frame_skip
@@ -68,7 +68,7 @@ for episode_num in range(EPISODE_COUNT):
             print(f"Episode: {episode_num}, Total Reward: {total_reward}")
             if info["flag_get"]:
                 os.makedirs(os.path.join("games", f"game_{episode_num}"), exist_ok=True)
-                frame_logger = env.env.env.env  # Unwrap to FrameLogger
+                frame_logger = env.env.env.env  
                 for frame_index, (frame, action) in enumerate(zip(frame_logger.logged_frames, frame_logger.logged_actions)):
                     frame = Image.fromarray(frame).resize((frame.shape[1] * 10, frame.shape[0] * 10), Image.NEAREST)
                     frame.save(os.path.join("games", f"game_{episode_num}", f"frame_{frame_index}.png"))

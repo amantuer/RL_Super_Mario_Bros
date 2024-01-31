@@ -1,13 +1,13 @@
 import torch
 import os
 
-import mario_env  # Renamed gym_super_mario_bros
-from mario_actions import ACTION_RIGHT_ONLY  # Renamed gym_super_mario_bros.actions.RIGHT_ONLY
-from agent_player import MarioAgent  # Renamed Agent
-from environment_wrappers import enhance_environment  # Renamed apply_wrappers
+import mario_env  
+from mario_actions import ACTION_RIGHT_ONLY  
+from agent_player import MarioAgent  
+from environment_wrappers import enhance_environment  
 
 from nes_py.wrappers import JoypadSpace
-from utils import current_timestamp  # Renamed get_current_date_time_string
+from utils import current_timestamp  
 
 # Model path setup
 model_directory = os.path.join("models", current_timestamp())

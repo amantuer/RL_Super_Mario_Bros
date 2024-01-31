@@ -2,7 +2,7 @@ import numpy as np
 from gym import Wrapper
 from gym.wrappers import GrayScaleObservation, ResizeObservation, FrameStack
 
-class ActionRepeater(Wrapper):  # Renamed SkipFrame
+class ActionRepeater(Wrapper): 
     def __init__(self, environment, repeat_count):
         super(ActionRepeater, self).__init__(environment)
         self.repeat_count = repeat_count
