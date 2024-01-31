@@ -45,7 +45,9 @@ pip install -r requirements.txt
 If you need to add new libraries in the future, follow these steps:
 
 1.Add the library to requirements.txt with a specific version.
+
 2.Install the new library using pip install <library-name>.
+
 3.Update the repository to include the updated requirements.txt.
 
 License
