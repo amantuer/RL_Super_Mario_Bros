@@ -50,7 +50,8 @@ If you need to add new libraries in the future, follow these steps:
 
 3.Update the repository to include the updated requirements.txt.
 
-License
+**License**
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 
