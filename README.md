@@ -52,6 +52,6 @@ If you need to add new libraries in the future, follow these steps:
 
 ## License
 
-This project is licensed under the [LICENSE NAME] License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the [MIT](LICENSE.md).
 
 
